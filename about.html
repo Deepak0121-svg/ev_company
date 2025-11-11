@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — Semzy Automotive & Garage Products</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar container">
+      <a class="brand" href="index.html">
+        <img src="images/logo.jpg" alt="Semzy logo" class="brand-img" loading="lazy">
+        <span class="brand-text">Semzy Automotive & Garage Products</span>
+      </a>
+
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="#products" onclick="location.href='index.html#products'">Products</a></li>
+        <li><a href="#contact" onclick="location.href='index.html#contact'">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="about-page container">
+    <section class="about-hero">
+      <h1>About Semzy</h1>
+      <p>Semzy Automotive is an Indian manufacturer focused on electric vehicles, pollution testing equipment, and assembly solutions for workshops and OEMs.</p>
+    </section>
+
+    <section class="mission-vision" data-animate>
+      <h2>Our Mission</h2>
+      <p>To provide affordable, reliable and environmentally responsible mobility and workshop equipment.</p>
+
+      <h2>Our Vision</h2>
+      <p>To be a leading partner for clean mobility and accurate emissions testing across India and neighbouring markets.</p>
+    </section>
+
+    <section class="team" data-animate>
+      <h2>What we build</h2>
+      <ul>
+        <li>EV prototypes & production systems</li>
+        <li>Petrol & diesel emissions equipment</li>
+        <li>Automated assembly & testing rigs</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>© <span id="year-2"></span> Semzy Automotive & Garage Products</div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

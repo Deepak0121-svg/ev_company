@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#0a192f" />
+  <title>Semzy Automotive & Garage Products</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/logo.jpg">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- NAV -->
+  <header>
+    <nav class="navbar container">
+      <a class="brand" href="index.html">
+        <img src="images/logo.jpg" alt="Semzy logo" class="brand-img" loading="lazy">
+        <span class="brand-text">Semzy Automotive & Garage Products</span>
+      </a>
+
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#why">Why Semzy</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="home" aria-label="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-inner container">
+        <h1 class="hero-title">Driving the Future of Clean Mobility</h1>
+        <p class="hero-sub">Electric Vehicles • Pollution Check Machines • Assembly Solutions</p>
+        <div class="hero-cta">
+          <a class="btn-primary" href="#products">Explore Products</a>
+          <a class="btn-outline" href="about.html">About Semzy</a>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <!-- PRODUCTS -->
+    <section id="products" class="products container">
+      <h2 class="section-title">Featured Products</h2>
+
+      <div class="product-grid">
+        <article class="product-card" data-animate>
+          <img src="images/ev.jpg" alt="Electric vehicle" loading="lazy">
+          <div class="card-body">
+            <h3>Electric Vehicles</h3>
+            <p>Zero-emission vehicles built for performance and range.</p>
+            <div class="card-actions">
+              <button class="btn" onclick="showDetails('ev')">Learn more</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-animate>
+          <img src="images/Gas_analyzer.jpg" alt="Petrol pollution check machine" loading="lazy">
+          <div class="card-body">
+            <h3>Petrol Pollution Check Machine</h3>
+            <p>Fast, accurate petrol emissions analysis with smart reporting.</p>
+            <div class="card-actions">
+              <button class="btn" onclick="showDetails('petrol')">View details</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-animate>
+          <img src="images/smoke_meter.jpg" alt="Diesel pollution check machine" loading="lazy">
+          <div class="card-body">
+            <h3>Diesel Smoke Meter</h3>
+            <p>Precision smoke density measurement for diesel engines and exhausts.</p>
+            <div class="card-actions">
+              <button class="btn" onclick="showDetails('diesel')">View details</button>
+            </div>
+          </div>
+        </article>
+
+       
+      </div>
+    </section>
+
+    <!-- SPECIAL BANNER -->
+    <section class="special-banner" aria-hidden="false">
+      <div class="container banner-inner">
+        <div>
+          <h3>Limited Offer — Launch Pricing</h3>
+          <p>Discounts on pollution testers & on-site installation packages. Offer valid till Dec 31, 2025.</p>
+        </div>
+        <div>
+          <a href="#contact" class="btn-primary">Request Quote</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY US -->
+    <section id="why" class="why container">
+      <h2 class="section-title">Why choose Semzy?</h2>
+      <div class="why-grid">
+        <div class="why-card" data-animate>
+          <strong>Industry Expertise</strong>
+          <p>Years of product engineering & field experience across workshops and OEMs.</p>
+        </div>
+        <div class="why-card" data-animate>
+          <strong>Reliable Support</strong>
+          <p>Local installation, calibration and after-sales support for peace of mind.</p>
+        </div>
+        <div class="why-card" data-animate>
+          <strong>Quality Assurance</strong>
+          <p>Robust test procedures and ISO-grade components for long product life.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact container">
+      <h2 class="section-title">Contact Us</h2>
+      <div class="contact-grid">
+        <form id="contactForm" class="contact-form" aria-label="contact form">
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+          <input type="email" id="email" name="email" placeholder="Email address" required>
+          <textarea id="message" name="message" placeholder="Message" required></textarea>
+          <button type="submit" class="btn-primary">Send Message</button>
+          <p class="status" aria-live="polite"></p>
+        </form>
+
+        <div class="contact-info">
+          <h3>Get in touch</h3>
+          <p><strong>Address:</strong> Semzy Industrial Park, Pune, India</p>
+          <p><strong>Email:</strong> info@semzy.com</p>
+          <p><strong>Phone:</strong> +91 98765 43210</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>© <span id="year"></span> Semzy Automotive & Garage Products</div>
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- PRODUCT MODAL -->
+  <div id="productModal" class="modal hidden" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-content" role="document">
+      <button class="close-btn" aria-label="Close" onclick="closeModal()">×</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+</body>
+</html>
